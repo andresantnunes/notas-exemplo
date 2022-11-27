@@ -1,6 +1,8 @@
 package com.example.notas.dataprovider.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,10 +11,11 @@ import javax.persistence.*;
 @Table(name="topico")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TopicoEntity {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     @Column
@@ -20,4 +23,9 @@ public class TopicoEntity {
 
     @Column
     private String descricao;
+
+    public TopicoEntity(String titulo, String descricao) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+    }
 }

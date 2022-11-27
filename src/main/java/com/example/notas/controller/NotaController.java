@@ -28,6 +28,8 @@ public class NotaController {
 
     @PostMapping
     public ResponseEntity<Object> salvaNota(@RequestBody NotaRequest notaRequest){
+        NotaResponse response = service.inserirNota(notaRequest);
+
         return ResponseEntity.ok(notaRequest);
     }
 }

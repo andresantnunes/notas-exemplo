@@ -22,12 +22,13 @@ public class TopicoContoller {
 
     @GetMapping
     public ResponseEntity<Object> retornaTopicos(){
-        List<TopicoEntity> response = service.encontraTopicos();
+        List<TopicoResponse> response = service.encontraTopicos();
         return ResponseEntity.ok(response);
     }
 
     @PostMapping
     public ResponseEntity<Object> salvaTopico(@RequestBody TopicoRequest topicoRequest){
+        TopicoResponse response = service.inserirTopico(topicoRequest);
         return ResponseEntity.ok(topicoRequest);
     }
 

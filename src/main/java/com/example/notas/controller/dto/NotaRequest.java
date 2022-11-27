@@ -15,5 +15,6 @@ import java.time.LocalDateTime;
 public class NotaRequest {
     private String titulo;
     private String nota;
-    private LocalDate dateTime;
+    private LocalDateTime dateTime;
+    private Long topicoId;
 }

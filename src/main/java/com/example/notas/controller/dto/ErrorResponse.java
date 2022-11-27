@@ -21,11 +21,12 @@ public class ErrorResponse {
 
     private int code;
 
-    private String status;
+//    private String status;
+//
+//    private String message;
+//
+//    private String stackTrace;
 
-    private String message;
+    private Exception data;
 
-    private String stackTrace;
-
-    private Object data;
 }
